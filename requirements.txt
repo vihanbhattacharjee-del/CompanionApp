@@ -1,0 +1,9 @@
+Authlib
+langchain
+langchain-community==0.4.1
+langchain-core==1.2.7
+langchain-openai==1.1.7
+langchain-text-splitters==1.1.0
+langgraph==1.0.6
+openai==2.15.0
+PyPDF2==3.0.1
