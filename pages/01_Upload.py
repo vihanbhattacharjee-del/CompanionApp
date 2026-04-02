@@ -26,7 +26,7 @@ except Exception as e:
 
 # title for uploading
 st.title("🏥 CareTaker Upload")
-st.markdown("*Upload your  documents*")
+st.markdown("*Upload your documents*")
 
 # show existing files
 with st.sidebar:
@@ -36,7 +36,7 @@ with st.sidebar:
             st.markdown(f"- {file_}")
 
 # file upload
-files = st.file_uploader("Upload your  documents", type=["pdf", "png", "jpg", "jpeg"], accept_multiple_files=True)
+files = st.file_uploader("Upload your documents", type=["pdf", "png", "jpg", "jpeg"], accept_multiple_files=True)
 
 # submit button
 if st.button("Upload"):
