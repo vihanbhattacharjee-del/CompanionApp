@@ -18,8 +18,8 @@ if not st.user.is_logged_in:
     st.stop()
 
 # Page title and description
-st.title("🤖 CareTaker Medical Assistant")
-st.markdown("*Ask questions about your medical documents and get AI-powered insights*")
+st.title("🤖 CareTaker Assistant")
+st.markdown("*Ask questions about your documents and get AI-powered insights*")
 
 # get the parent member table
 try:
@@ -39,12 +39,12 @@ except Exception as e:
     st.stop()
 
 # File selection with better styling
-st.markdown("### 📁 Select Medical Document")
+st.markdown("### 📁 Select Document")
 selected_file = st.selectbox(
     "Choose a document to chat with:", 
     os.listdir(parent_folder_id), 
     index=None,
-    help="Select a medical document to ask questions about",
+    help="Select a document to ask questions about",
     on_change=onchange_selecbox
 )
 
@@ -104,7 +104,7 @@ for messge_index, message in enumerate(st.session_state.messages):
         st.markdown(message["content"])
 
 # Enhanced chat input
-if prompt := st.chat_input("Ask about your medical document...", key="medical_chat"):
+if prompt := st.chat_input("Ask about your document...", key="medical_chat"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user", avatar="👤"):
         st.markdown(prompt)
